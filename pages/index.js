@@ -7,8 +7,7 @@ import {
 } from "@ant-design/icons";
 import { getArticles, searchArticles } from "../lib/api";
 import axios from "axios";
-import CircularJSON from "circular-json";
-
+import Link from "next/link";
 const { confirm } = Modal;
 const { Search } = Input;
 
@@ -111,12 +110,12 @@ const Articles = ({ articles }) => {
   return (
     <div>
       <div style={{ display: "flex" }}>
-        <Button type="link" href="/">
-          Articles
-        </Button>
-        <Button type="link" href="/users">
-          Users
-        </Button>
+        <Link href="/">
+          <Button type="link">Articles</Button>
+        </Link>
+        <Link href="/users">
+          <Button type="link">Users</Button>
+        </Link>
       </div>
 
       <div style={{ marginBottom: 16 }}>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { List, Button, Modal, message, Input } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { getArticlesByUserId, getUserById, getUsers } from "../lib/api";
+import Link from "next/link";
 
 const { confirm } = Modal;
 const { Search } = Input;
@@ -91,12 +92,12 @@ const Users = ({ users }) => {
   return (
     <div>
       <div style={{ display: "flex" }}>
-        <Button type="link" href="/">
-          Articles
-        </Button>
-        <Button type="link" href="/users">
-          Users
-        </Button>
+        <Link href="/">
+          <Button type="link">Articles</Button>
+        </Link>
+        <Link href="/users">
+          <Button type="link">Users</Button>
+        </Link>
       </div>
       <div style={{ marginBottom: 16 }}>
         <Search
